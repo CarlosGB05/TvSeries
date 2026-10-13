@@ -12,15 +12,29 @@
 
 <body class="d-flex flex-column min-vh-100 bg-gradient-to-br">
 
-<header class="fixed top-0 w-full h-24 z-50 p-4 bg-gradient-to-br from-blue-950 via-blue-800 to-indigo-900 text-white flex items-center justify-between px-8">
+<header class="fixed top-0 w-full h-24 z-50 p-4 bg-[#7ACED4] text-white flex items-center justify-between px-8">
 
-    <div class="w-1/4 hidden md:block"></div>
+    <!-- Logo a la izquierda -->
+    <div class="w-1/4 flex items-center">
+        <img src="image/Logo2.1.png" alt="Logo TvSeries" class="h-10 w-auto object-contain ml-4">
+    </div>
 
+    <!-- Título centrado -->
     <h1 class="text-3xl font-bold text-center flex-1">TvSeries</h1>
 
-    <form class="w-1/4 flex justify-end" role="search">
-        <input type="search" class="form-control form-control-dark bg-white text-black border-secondary" placeholder="¿Qué buscas?..." aria-label="Search">
-    </form>
+    <!-- Dropdown a la derecha -->
+    <div class="w-1/4 flex justify-end">
+        <div class="dropdown dropdown-menu-end">
+            <button class="btn text-black bg-white dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                ¿Qué buscas?
+            </button>
+            <ul class="dropdown-menu bg-white text-black p-0">
+                <li><a class="dropdown-item text-black" href="#">Lista de Películas</a></li>
+                <li><a class="dropdown-item text-black" href="#">Lista de Series</a></li>
+                <li><a class="dropdown-item text-black" href="#">Acerca de</a></li>
+            </ul>
+        </div>
+    </div>
 
 </header>
 
