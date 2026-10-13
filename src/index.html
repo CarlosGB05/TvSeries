@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TvSeries | Inicio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/output.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-gradient-to-br">
+
+<header class="fixed top-0 w-full h-24 z-50 p-4 bg-[#7ACED4] text-white flex items-center justify-between px-8">
+
+    <!-- Logo a la izquierda -->
+    <div class="w-1/4 flex items-center">
+        <img src="image/Logo2.png" alt="Logo TvSeries" class="h-8 w-auto object-contain">
+    </div>
+
+    <!-- Título centrado -->
+    <h1 class="text-3xl font-bold text-center flex-1">TvSeries</h1>
+
+    <!-- Formulario / Input a la derecha -->
+    <form class="w-1/4 flex justify-end" role="search">
+        <input type="search" class="form-control form-control-dark bg-white text-black border-secondary" placeholder="¿Qué buscas?..." aria-label="Search">
+    </form>
+
+</header>
+
+<section class="flex flex-1 items-center justify-center px-3 pt-36 pb-8">
+    <div class="mx-auto max-w-8xl">
+
+        <div class="flex flex-wrap items-center justify-center gap-3">
+
+            <div class="w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl sm:w-72">
+                <img src="https://picsum.photos/seed/stranger-things/400/600" alt="Stranger Things" class="aspect-[4/5] w-full rounded-t-xl object-cover">
+                <div class="p-3 text-center">
+                    <h3 class="truncate text-sm font-semibold text-gray-800">Stranger Things</h3>
+                    <p class="text-xs text-gray-500">Sci-Fi · 2022</p>
+                    <button class="btn btn-primary">Saber más</button>
+                </div>
+            </div>
+
+            <div class="w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl sm:w-72">
+                <img src="https://picsum.photos/seed/the-office/400/600" alt="The Office" class="aspect-[4/5] w-full rounded-t-xl object-cover">
+                <div class="p-3 text-center">
+                    <h3 class="truncate text-sm font-semibold text-gray-800">The Office</h3>
+                    <p class="text-xs text-gray-500">Comedia · 2013</p>
+                    <button class="btn btn-primary ">Saber más</button>
+                </div>
+            </div>
+
+            <div class="w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl sm:w-72">
+                <img src="https://picsum.photos/seed/game-of-thrones/400/600" alt="Game of Thrones" class="aspect-[4/5] w-full rounded-t-xl object-cover">
+                <div class="p-3 text-center">
+                    <h3 class="truncate text-sm font-semibold text-gray-800">Game of Thrones</h3>
+                    <p class="text-xs text-gray-500">Fantasía · 2019</p>
+                    <button class="btn btn-primary ">Saber más</button>
+                </div>
+            </div>
+
+            <div class="w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl sm:w-72">
+                <img src="https://picsum.photos/seed/the-mandalorian/400/600" alt="The Mandalorian" class="aspect-[4/5] w-full rounded-t-xl object-cover">
+                <div class="p-3 text-center">
+                    <h3 class="truncate text-sm font-semibold text-gray-800">The Mandalorian</h3>
+                    <p class="text-xs text-gray-500">Sci-Fi · 2023</p>
+                    <button class="btn btn-primary ">Saber más</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-10 mb-8 text-center">
+            <a class="btn btn-outline btn-primary transition hover:scale-105 hover:shadow-xl btn-detailMovie">
+                Ver todas las peliculas
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<div class="mx-auto max-w-5xl px-6 py-10">
+    <div id="seriesCarousel" class="carousel slide overflow-hidden rounded-2xl shadow-xl" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#seriesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+            <button type="button" data-bs-target="#seriesCarousel" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+            <button type="button" data-bs-target="#seriesCarousel" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
+            <button type="button" data-bs-target="#seriesCarousel" data-bs-slide-to="3" aria-label="Diapositiva 4"></button>
+            <button type="button" data-bs-target="#seriesCarousel" data-bs-slide-to="4" aria-label="Diapositiva 5"></button>
+            <button type="button" data-bs-target="#seriesCarousel" data-bs-slide-to="5" aria-label="Diapositiva 6"></button>
+            <button type="button" data-bs-target="#seriesCarousel" data-bs-slide-to="6" aria-label="Diapositiva 7"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://picsum.photos/seed/slide-1/1200/450" class="d-block w-100" alt="Serie 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/seed/slide-2/1200/450" class="d-block w-100" alt="Serie 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/seed/slide-3/1200/450" class="d-block w-100" alt="Serie 3">
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/seed/slide-4/1200/450" class="d-block w-100" alt="Serie 4">
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/seed/slide-5/1200/450" class="d-block w-100" alt="Serie 5">
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/seed/slide-6/1200/450" class="d-block w-100" alt="Serie 6">
+            </div>
+            <div class="carousel-item">
+                <img src="https://picsum.photos/seed/slide-7/1200/450" class="d-block w-100" alt="Serie 7">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#seriesCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#seriesCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+</div>
+
+<section class="flex flex-1 items-center justify-center px-3 pt-26 pb-8">
+    <div class="mx-auto max-w-8xl">
+
+        <div class="flex flex-wrap items-center justify-center gap-3">
+
+            <div class="w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl sm:w-72">
+                <img src="https://picsum.photos/seed/stranger-things/400/600" alt="Stranger Things" class="aspect-[4/5] w-full rounded-t-xl object-cover">
+                <div class="p-3 text-center">
+                    <h3 class="truncate text-sm font-semibold text-gray-800">Stranger Things</h3>
+                    <p class="text-xs text-gray-500">Sci-Fi · 2022</p>
+                    <button class="btn btn-primary btn-detail">Saber más</button>
+                </div>
+            </div>
+
+            <div class="w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl sm:w-72">
+                <img src="https://picsum.photos/seed/the-office/400/600" alt="The Office" class="aspect-[4/5] w-full rounded-t-xl object-cover">
+                <div class="p-3 text-center">
+                    <h3 class="truncate text-sm font-semibold text-gray-800">The Office</h3>
+                    <p class="text-xs text-gray-500">Comedia · 2013</p>
+                    <button class="btn btn-primary btn-detail">Saber más</button>
+                </div>
+            </div>
+
+            <div class="w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl sm:w-72">
+                <img src="https://picsum.photos/seed/game-of-thrones/400/600" alt="Game of Thrones" class="aspect-[4/5] w-full rounded-t-xl object-cover">
+                <div class="p-3 text-center">
+                    <h3 class="truncate text-sm font-semibold text-gray-800">Game of Thrones</h3>
+                    <p class="text-xs text-gray-500">Fantasía · 2019</p>
+                    <button class="btn btn-primary btn-detail">Saber más</button>
+                </div>
+            </div>
+
+            <div class="w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl sm:w-72">
+                <img src="https://picsum.photos/seed/the-mandalorian/400/600" alt="The Mandalorian" class="aspect-[4/5] w-full rounded-t-xl object-cover">
+                <div class="p-3 text-center">
+                    <h3 class="truncate text-sm font-semibold text-gray-800">The Mandalorian</h3>
+                    <p class="text-xs text-gray-500">Sci-Fi · 2023</p>
+                    <button class="btn btn-primary btn-detail">Saber más</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-10 mb-8 text-center">
+            <a class="btn btn-outline btn-primary transition hover:scale-105 hover:shadow-xl btn-detailSerie">
+                Ver todas las series
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const btnLogin = document.getElementById('btnLogin');
+    if (btnLogin) {
+        btnLogin.addEventListener('click', function () {
+            window.location.href = 'login.html';
+        });
+    }
+
+    document.querySelectorAll('.btn-detailMovie').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            window.location.href = 'listaPeliculas.html';
+        });
+    });
+
+    document.querySelectorAll('.btn-detailSerie').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            window.location.href = 'listaSeries.html';
+        });
+    });
+
+</script>
+
+<footer class="mt-auto py-3 bg-black text-white">
+    <ul class="nav justify-content-center border-bottom border-secondary pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li>
+    </ul>
+    <p class="text-center text-white mb-0">© 2025 Company, Inc</p>
+</footer>
+
+
+</body>
+
+
+</html>

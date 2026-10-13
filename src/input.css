@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.accordion-collapse.collapse {
+    visibility: visible;
+}
+
+.accordion-body {
+    color: #212529 !important; /* Fuerza color oscuro en las etiquetas/textos */
+}
+
+.accordion-body .form-check-label {
+    color: #212529 !important;
+}
