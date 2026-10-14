@@ -12,11 +12,13 @@
 
 <body class="d-flex flex-column min-vh-100 bg-gradient-to-br">
 
-    <header class="top-0 w-full h-24 z-50 p-4 bg-[#7ACED4] text-white flex items-center justify-between px-8">
+    <header class="fixed top-0 w-full h-24 z-50 p-4 bg-[#7ACED4] text-white flex items-center justify-between px-8">
 
         <!-- Logo a la izquierda -->
         <div class="w-1/4 flex items-center">
-            <img src="image/Logo2.1.png" alt="Logo TvSeries" class="h-10 w-auto object-contain ml-4">
+            <a href="index.html">
+                <img src="image/Logo2.1.png" alt="Logo TvSeries" class="h-10 w-auto object-contain ml-4">
+            </a>
         </div>
 
         <!-- Título centrado -->
@@ -29,8 +31,8 @@
                     ¿Qué buscas?
                 </button>
                 <ul class="dropdown-menu bg-white text-black p-0">
-                    <li><a class="dropdown-item text-black" href="#">Lista de Películas</a></li>
-                    <li><a class="dropdown-item text-black" href="#">Lista de Series</a></li>
+                    <li><a class="dropdown-item text-black" href="listaPeliculas.html">Lista de Películas</a></li>
+                    <li><a class="dropdown-item text-black" href="listaSeries.html">Lista de Series</a></li>
                     <li><a class="dropdown-item text-black" href="#">Acerca de</a></li>
                 </ul>
             </div>
@@ -40,7 +42,7 @@
 
 
 
-    <main class="container-fluid px-4 mt-12 flex-grow-1">
+    <main class="container-fluid px-4 pt-5 flex-grow-1" style="padding-top: 7rem !important;">
         <div class="row">
 
             <!-- ================= SIDEBAR / FILTROS (IZQUIERDA) ================= -->
@@ -151,37 +153,37 @@
 
                     <div class="grid grid-cols-2 justify-center gap-4 sm:grid-cols-3 lg:grid-cols-5">
                         <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="https://picsum.photos/seed/l1/400/600" alt="Serie 1" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                            <img src="image/onepiece.png" alt="Serie 1" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                             <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Serie 1</h3>
-                                <p class="text-xs text-gray-500">Drama · 2020</p>
+                                <h3 class="truncate text-sm font-semibold text-gray-800">One Piece</h3>
+                                <p class="text-xs text-gray-500">Animación · 1999</p>
                             </div>
                         </div>
                         <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="https://picsum.photos/seed/l2/400/600" alt="Serie 2" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                            <img src="image/breakingbad.png" alt="Serie 2" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                             <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Serie 2</h3>
-                                <p class="text-xs text-gray-500">Comedia · 2021</p>
+                                <h3 class="truncate text-sm font-semibold text-gray-800">Breaking Bad</h3>
+                                <p class="text-xs text-gray-500">Criminal · 2008</p>
                             </div>
                         </div>
                         <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="https://picsum.photos/seed/l3/400/600" alt="Serie 3" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                            <img src="image/bandbrothers.jpg" alt="Serie 3" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                             <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Serie 3</h3>
-                                <p class="text-xs text-gray-500">Sci-Fi · 2022</p>
+                                <h3 class="truncate text-sm font-semibold text-gray-800">Band of Brothers</h3>
+                                <p class="text-xs text-gray-500">Histórico · 2001</p>
                             </div>
                         </div>
                         <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="https://picsum.photos/seed/l4/400/600" alt="Serie 4" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                            <img src="image/Chernobyl.jfif" alt="Serie 4" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                             <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Serie 4</h3>
-                                <p class="text-xs text-gray-500">Acción · 2019</p>
+                                <h3 class="truncate text-sm font-semibold text-gray-800">Chernobyl</h3>
+                                <p class="text-xs text-gray-500">Histórico · 2019</p>
                             </div>
                         </div>
                         <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="https://picsum.photos/seed/l5/400/600" alt="Serie 5" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                            <img src="image/gamethrones.jfif" alt="Serie 5" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                             <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Serie 5</h3>
+                                <h3 class="truncate text-sm font-semibold text-gray-800">Game of Thrones</h3>
                                 <p class="text-xs text-gray-500">Terror · 2023</p>
                             </div>
                         </div>
@@ -193,37 +195,37 @@
 
                     <div class="grid grid-cols-2 justify-center gap-4 sm:grid-cols-3 lg:grid-cols-5">
                         <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="https://picsum.photos/seed/l1/400/600" alt="Serie 1" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                            <img src="image/daredevil.jpg" alt="Serie 1" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                             <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Serie 1</h3>
-                                <p class="text-xs text-gray-500">Drama · 2020</p>
+                                <h3 class="truncate text-sm font-semibold text-gray-800">Daredevil</h3>
+                                <p class="text-xs text-gray-500">Acción · 2020</p>
                             </div>
                         </div>
                         <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="https://picsum.photos/seed/l2/400/600" alt="Serie 2" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                            <img src="image/fullmetal.jpg" alt="Serie 2" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                             <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Serie 2</h3>
+                                <h3 class="truncate text-sm font-semibold text-gray-800">Fullmetal Alchemist: Brotherhood</h3>
                                 <p class="text-xs text-gray-500">Comedia · 2021</p>
                             </div>
                         </div>
                         <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="https://picsum.photos/seed/l3/400/600" alt="Serie 3" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                            <img src="image/avatar.jpg" alt="Serie 3" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                             <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Serie 3</h3>
-                                <p class="text-xs text-gray-500">Sci-Fi · 2022</p>
+                                <h3 class="truncate text-sm font-semibold text-gray-800">Avatar: la leyenda de Aang</h3>
+                                <p class="text-xs text-gray-500">Animación · 2005</p>
                             </div>
                         </div>
                         <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="https://picsum.photos/seed/l4/400/600" alt="Serie 4" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                            <img src="image/soprano.jpg" alt="Serie 4" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                             <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Serie 4</h3>
+                                <h3 class="truncate text-sm font-semibold text-gray-800">Los Soprano</h3>
                                 <p class="text-xs text-gray-500">Acción · 2019</p>
                             </div>
                         </div>
                         <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="https://picsum.photos/seed/l5/400/600" alt="Serie 5" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                            <img src="image/ninjago.jpg" alt="Serie 5" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                             <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Serie 5</h3>
+                                <h3 class="truncate text-sm font-semibold text-gray-800">Lego Ninjago</h3>
                                 <p class="text-xs text-gray-500">Terror · 2023</p>
                             </div>
                         </div>
@@ -235,37 +237,37 @@
 
                     <div class="grid grid-cols-2 justify-center gap-4 sm:grid-cols-3 lg:grid-cols-5">
                         <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="https://picsum.photos/seed/l1/400/600" alt="Serie 1" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                            <img src="image/simpsons.jpg" alt="Serie 1" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                             <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Serie 1</h3>
+                                <h3 class="truncate text-sm font-semibold text-gray-800">Los Simpsons</h3>
                                 <p class="text-xs text-gray-500">Drama · 2020</p>
                             </div>
                         </div>
                         <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="https://picsum.photos/seed/l2/400/600" alt="Serie 2" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                            <img src="image/clonewars.jpg" alt="Serie 2" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                             <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Serie 2</h3>
+                                <h3 class="truncate text-sm font-semibold text-gray-800">Star Wars Clone Wars</h3>
                                 <p class="text-xs text-gray-500">Comedia · 2021</p>
                             </div>
                         </div>
                         <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="https://picsum.photos/seed/l3/400/600" alt="Serie 3" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                            <img src="image/wire.jpg" alt="Serie 3" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                             <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Serie 3</h3>
+                                <h3 class="truncate text-sm font-semibold text-gray-800">The Wire</h3>
                                 <p class="text-xs text-gray-500">Sci-Fi · 2022</p>
                             </div>
                         </div>
                         <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="https://picsum.photos/seed/l4/400/600" alt="Serie 4" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                            <img src="image/peakyblinders.jpg" alt="Serie 4" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                             <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Serie 4</h3>
+                                <h3 class="truncate text-sm font-semibold text-gray-800">Peaky Blinders</h3>
                                 <p class="text-xs text-gray-500">Acción · 2019</p>
                             </div>
                         </div>
                         <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="https://picsum.photos/seed/l5/400/600" alt="Serie 5" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                            <img src="image/loki.jpg" alt="Serie 5" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                             <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Serie 5</h3>
+                                <h3 class="truncate text-sm font-semibold text-gray-800">Loki</h3>
                                 <p class="text-xs text-gray-500">Terror · 2023</p>
                             </div>
                         </div>
