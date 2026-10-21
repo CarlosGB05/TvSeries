@@ -6,291 +6,375 @@
     <title>TvSeries | Lista</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link rel="stylesheet" href="../css/output.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100 bg-gradient-to-br">
 
-    <header class="fixed top-0 w-full h-24 z-50 p-4 bg-[#7ACED4] text-white flex items-center justify-between px-8">
+<header class="fixed top-0 w-full h-24 z-50 p-4 bg-[#7ACED4] text-white flex items-center justify-between px-8">
 
-        <!-- Logo a la izquierda -->
-        <div class="w-1/4 flex items-center">
-            <a href="index.html">
-                <img src="image/Logo2.1.png" alt="Logo TvSeries" class="h-10 w-auto object-contain ml-4">
-            </a>
+    <!-- Logo a la izquierda -->
+    <div class="w-1/4 flex items-center">
+        <a href="index.html">
+            <img src="image/Logo2.1.png" alt="Logo TvSeries" class="h-10 w-auto object-contain ml-4">
+        </a>
+    </div>
+
+    <!-- Título centrado -->
+    <h1 class="text-3xl font-bold text-center flex-1">TvSeries</h1>
+
+    <!-- Dropdown a la derecha -->
+    <div class="w-1/4 flex justify-end">
+        <div class="dropdown dropdown-menu-end">
+            <button class="btn text-black bg-white dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                ¿Qué buscas?
+            </button>
+            <ul class="dropdown-menu bg-white text-black p-0">
+                <li><a class="dropdown-item text-black" href="listaPeliculas.html">Lista de Películas</a></li>
+                <li><a class="dropdown-item text-black" href="listaSeries.html">Lista de Series</a></li>
+                <li><a class="dropdown-item text-black" href="#">Acerca de</a></li>
+            </ul>
         </div>
+    </div>
 
-        <!-- Título centrado -->
-        <h1 class="text-3xl font-bold text-center flex-1">TvSeries</h1>
+</header>
 
-        <!-- Dropdown a la derecha -->
-        <div class="w-1/4 flex justify-end">
-            <div class="dropdown dropdown-menu-end">
-                <button class="btn text-black bg-white dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    ¿Qué buscas?
-                </button>
-                <ul class="dropdown-menu bg-white text-black p-0">
-                    <li><a class="dropdown-item text-black" href="listaPeliculas.html">Lista de Películas</a></li>
-                    <li><a class="dropdown-item text-black" href="listaSeries.html">Lista de Series</a></li>
-                    <li><a class="dropdown-item text-black" href="#">Acerca de</a></li>
-                </ul>
+
+
+<main class="container-fluid px-4 pt-5 pb-12 flex-grow-1" style="padding-top: 7rem !important;">
+    <div class="row">
+
+        <!-- ================= SIDEBAR / FILTROS (IZQUIERDA) ================= -->
+        <aside class="col-12 col-md-3 col-lg-2 py-4 mt-12">
+
+            <div class="accordion filter-accordion shadow-sm rounded bg-white p-2" id="accordionFiltros">
+
+                <!-- Filtro 1: Género -->
+                <div class="accordion-item text-black border-0 border-bottom">
+                    <h2 class="accordion-header" id="headingGenero">
+                        <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGenero" aria-expanded="true">
+                            Género
+                        </button>
+                    </h2>
+                    <div id="collapseGenero" class="accordion-collapse collapse show">
+                        <div class="accordion-body p-2">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="catAccion">
+                                <label class="form-check-label d-flex text-black justify-content-between" for="catAccion">
+                                    Acción / Aventura <span class="count-badge text-muted">(95)</span>
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="catAnimacion">
+                                <label class="form-check-label d-flex justify-content-between" for="catAnimacion">
+                                    Animación / Anime <span class="count-badge text-muted">(64)</span>
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="catComedia">
+                                <label class="form-check-label d-flex justify-content-between" for="catComedia">
+                                    Comedia <span class="count-badge text-muted">(85)</span>
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="catCrime">
+                                <label class="form-check-label d-flex justify-content-between" for="catCrime">
+                                    Crimen / Drama <span class="count-badge text-muted">(120)</span>
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="catFantasia">
+                                <label class="form-check-label d-flex justify-content-between" for="catFantasia">
+                                    Fantasía <span class="count-badge text-muted">(58)</span>
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="catSciFi">
+                                <label class="form-check-label d-flex justify-content-between" for="catSciFi">
+                                    Ciencia Ficción <span class="count-badge text-muted">(42)</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filtro 2: Plataformas -->
+                <div class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header" id="headingPlataforma">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlataforma">
+                            Plataforma
+                        </button>
+                    </h2>
+                    <div id="collapsePlataforma" class="accordion-collapse collapse">
+                        <div class="accordion-body p-2">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="platNetflix">
+                                <label class="form-check-label" for="platNetflix">Netflix</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="platHBO">
+                                <label class="form-check-label" for="platHBO">Max / HBO</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="platDisney">
+                                <label class="form-check-label" for="platDisney">Disney+</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="platAmazon">
+                                <label class="form-check-label" for="platAmazon">Prime Video</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="platApple">
+                                <label class="form-check-label" for="platApple">Apple TV+</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filtro 3: Año de Estreno -->
+                <div class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header" id="headingAño">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAño">
+                            Año de estreno
+                        </button>
+                    </h2>
+                    <div id="collapseAño" class="accordion-collapse collapse">
+                        <div class="accordion-body p-2">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <input type="number" class="form-control form-control-sm" placeholder="Mín (e.g. 1990)">
+                                <span>-</span>
+                                <input type="number" class="form-control form-control-sm" placeholder="Máx (e.g. 2024)">
+                            </div>
+                            <button class="btn btn-sm btn-outline-dark w-100">Aplicar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filtro 4: Valoración / Puntuación -->
+                <div class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header" id="headingRating">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRating">
+                            Valoración
+                        </button>
+                    </h2>
+                    <div id="collapseRating" class="accordion-collapse collapse">
+                        <div class="accordion-body p-2">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="ratingRadio" id="rate9">
+                                <label class="form-check-label text-warning" for="rate9">
+                                    ★★★★★ <span class="text-dark">(9.0 o más)</span>
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="ratingRadio" id="rate8">
+                                <label class="form-check-label text-warning" for="rate8">
+                                    ★★★★☆ <span class="text-dark">(8.0 o más)</span>
+                                </label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="radio" name="ratingRadio" id="rate7">
+                                <label class="form-check-label text-warning" for="rate7">
+                                    ★★★☆☆ <span class="text-dark">(7.0 o más)</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filtro 5: Estado -->
+                <div class="accordion-item border-0 border-bottom">
+                    <h2 class="accordion-header" id="headingEstado">
+                        <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEstado">
+                            Estado
+                        </button>
+                    </h2>
+                    <div id="collapseEstado" class="accordion-collapse collapse">
+                        <div class="accordion-body p-2">
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="estEmision">
+                                <label class="form-check-label" for="estEmision">En emisión</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="estFinalizada">
+                                <label class="form-check-label" for="estFinalizada">Finalizada</label>
+                            </div>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="estMiniserie">
+                                <label class="form-check-label" for="estMiniserie">Miniserie</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botón para Limpiar Filtros -->
+                <div class="p-2 mt-2">
+                    <button class="btn btn-sm btn-outline-secondary w-100">
+                        <i class="bi bi-funnel"></i> Limpiar filtros
+                    </button>
+                </div>
+
             </div>
-        </div>
+        </aside>
 
-    </header>
+        <!-- ================= CONTENIDO / TARJETAS (DERECHA) ================= -->
+        <section class="col-12 col-md-9 col-lg-10 py-4">
+            <div class="mb-4">
+                <h2 class="text-center mb-2">Lista de Series</h2>
+            </div>
 
-
-
-    <main class="container-fluid px-4 pt-5 pb-12 flex-grow-1" style="padding-top: 7rem !important;">
-        <div class="row">
-
-            <!-- ================= SIDEBAR / FILTROS (IZQUIERDA) ================= -->
-            <aside class="col-12 col-md-3 col-lg-2 py-4 mt-12">
-
-                <div class="accordion filter-accordion" id="accordionFiltros">
-
-                    <!-- Filtro 1: Categoría / Género -->
-                    <div class="accordion-item text-black">
-                        <h2 class="accordion-header" id="headingGenero">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGenero" aria-expanded="true">
-                                Género
-                            </button>
-                        </h2>
-                        <div id="collapseGenero" class="accordion-collapse collapse show">
-                            <div class="accordion-body">
-                                <div class="form-check mb-2">
-                                    <input class="form-check-input" type="checkbox" id="catDrama">
-                                    <label class="form-check-label d-flex text-black justify-content-between" for="catDrama">
-                                        Drama <span class="count-badge">(120)</span>
-                                    </label>
-                                </div>
-                                <div class="form-check mb-2">
-                                    <input class="form-check-input" type="checkbox" id="catComedia">
-                                    <label class="form-check-label d-flex justify-content-between" for="catComedia">
-                                        Comedia <span class="count-badge">(85)</span>
-                                    </label>
-                                </div>
-                                <div class="form-check mb-2">
-                                    <input class="form-check-input" type="checkbox" id="catSciFi">
-                                    <label class="form-check-label d-flex justify-content-between" for="catSciFi">
-                                        Sci-Fi <span class="count-badge">(42)</span>
-                                    </label>
-                                </div>
-                                <div class="form-check mb-2">
-                                    <input class="form-check-input" type="checkbox" id="catAccion">
-                                    <label class="form-check-label d-flex justify-content-between" for="catAccion">
-                                        Acción <span class="count-badge">(95)</span>
-                                    </label>
-                                </div>
-                            </div>
+            <!-- Bloque 1 -->
+            <div class="mx-auto max-w-7xl">
+                <div class="grid grid-cols-2 justify-center gap-4 sm:grid-cols-3 lg:grid-cols-5">
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                        <img src="image/onepiece.png" alt="One Piece" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                        <div class="p-3 text-center">
+                            <h3 class="truncate text-sm font-semibold text-gray-800">One Piece</h3>
+                            <p class="text-xs text-gray-500">Animación · 1999</p>
                         </div>
                     </div>
-
-                    <!-- Filtro 2: Año de Lanzamiento (Rango de precios/valores) -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingAño">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAño">
-                                Año de estreno
-                            </button>
-                        </h2>
-                        <div id="collapseAño" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <div class="d-flex align-items-center gap-2 mb-2">
-                                    <input type="number" class="form-control form-control-sm" placeholder="Mín">
-                                    <span>-</span>
-                                    <input type="number" class="form-control form-control-sm" placeholder="Máx">
-                                    <button class="btn btn-sm btn-light border"><i class="bi bi-arrow-right"></i></button>
-                                </div>
-                            </div>
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                        <img src="image/breakingbad.png" alt="Breaking Bad" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                        <div class="p-3 text-center">
+                            <h3 class="truncate text-sm font-semibold text-gray-800">Breaking Bad</h3>
+                            <p class="text-xs text-gray-500">Crimen / Drama · 2008</p>
                         </div>
                     </div>
-
-                    <!-- Filtro 3: Formato / Estado (Radio buttons) -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTipo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTipo">
-                                Formato
-                            </button>
-                        </h2>
-                        <div id="collapseTipo" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <div class="form-check mb-2">
-                                    <input class="form-check-input" type="radio" name="formatoRadio" id="todos" checked>
-                                    <label class="form-check-label" for="todos">Todos</label>
-                                </div>
-                                <div class="form-check mb-2">
-                                    <input class="form-check-input" type="radio" name="formatoRadio" id="serie">
-                                    <label class="form-check-label" for="serie">Serie de TV</label>
-                                </div>
-                                <div class="form-check mb-2">
-                                    <input class="form-check-input" type="radio" name="formatoRadio" id="pelicula">
-                                    <label class="form-check-label" for="pelicula">Película</label>
-                                </div>
-                            </div>
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                        <img src="image/bandbrothers.jpg" alt="Band of Brothers" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                        <div class="p-3 text-center">
+                            <h3 class="truncate text-sm font-semibold text-gray-800">Band of Brothers</h3>
+                            <p class="text-xs text-gray-500">Bélico / Drama · 2001</p>
                         </div>
                     </div>
-
-                </div>
-            </aside>
-
-            <!-- ================= CONTENIDO / TARJETAS (DERECHA) ================= -->
-            <section class="col-12 col-md-9 col-lg-10 py-4">
-                <div class="mb-4">
-                    <h2 class="text-center mb-2">Lista de Series</h2>
-                    <nav class="d-flex justify-content-end me-3" aria-label="Paginación de series">
-                        <ul class="pagination pagination-sm mb-0">
-                            <li class="page-item"><a class="page-link" href="#" aria-label="Anterior"><span aria-hidden="true">«</span></a></li>
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#" aria-label="Siguiente"><span aria-hidden="true">»</span></a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="mx-auto max-w-7xl">
-
-                    <div class="grid grid-cols-2 justify-center gap-4 sm:grid-cols-3 lg:grid-cols-5">
-                        <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="image/onepiece.png" alt="Serie 1" class="aspect-[3/4] w-full rounded-t-xl object-cover">
-                            <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">One Piece</h3>
-                                <p class="text-xs text-gray-500">Animación · 1999</p>
-                            </div>
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                        <img src="image/Chernobyl.jfif" alt="Chernobyl" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                        <div class="p-3 text-center">
+                            <h3 class="truncate text-sm font-semibold text-gray-800">Chernobyl</h3>
+                            <p class="text-xs text-gray-500">Drama / Histórico · 2019</p>
                         </div>
-                        <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="image/breakingbad.png" alt="Serie 2" class="aspect-[3/4] w-full rounded-t-xl object-cover">
-                            <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Breaking Bad</h3>
-                                <p class="text-xs text-gray-500">Criminal · 2008</p>
-                            </div>
+                    </div>
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                        <img src="image/gamethrones.jfif" alt="Game of Thrones" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                        <div class="p-3 text-center">
+                            <h3 class="truncate text-sm font-semibold text-gray-800">Game of Thrones</h3>
+                            <p class="text-xs text-gray-500">Fantasía / Drama · 2011</p>
                         </div>
-                        <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="image/bandbrothers.jpg" alt="Serie 3" class="aspect-[3/4] w-full rounded-t-xl object-cover">
-                            <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Band of Brothers</h3>
-                                <p class="text-xs text-gray-500">Histórico · 2001</p>
-                            </div>
-                        </div>
-                        <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="image/Chernobyl.jfif" alt="Serie 4" class="aspect-[3/4] w-full rounded-t-xl object-cover">
-                            <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Chernobyl</h3>
-                                <p class="text-xs text-gray-500">Histórico · 2019</p>
-                            </div>
-                        </div>
-                        <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="image/gamethrones.jfif" alt="Serie 5" class="aspect-[3/4] w-full rounded-t-xl object-cover">
-                            <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Game of Thrones</h3>
-                                <p class="text-xs text-gray-500">Terror · 2023</p>
-                            </div>
-                        </div>
-
                     </div>
                 </div>
+            </div>
 
-                <div class="mx-auto max-w-7xl mt-10">
-
-                    <div class="grid grid-cols-2 justify-center gap-4 sm:grid-cols-3 lg:grid-cols-5">
-                        <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="image/daredevil.jpg" alt="Serie 1" class="aspect-[3/4] w-full rounded-t-xl object-cover">
-                            <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Daredevil</h3>
-                                <p class="text-xs text-gray-500">Acción · 2020</p>
-                            </div>
+            <!-- Bloque 2 -->
+            <div class="mx-auto max-w-7xl mt-10">
+                <div class="grid grid-cols-2 justify-center gap-4 sm:grid-cols-3 lg:grid-cols-5">
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                        <img src="image/daredevil.jpg" alt="Daredevil" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                        <div class="p-3 text-center">
+                            <h3 class="truncate text-sm font-semibold text-gray-800">Daredevil</h3>
+                            <p class="text-xs text-gray-500">Acción / Crimen · 2015</p>
                         </div>
-                        <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="image/fullmetal.jpg" alt="Serie 2" class="aspect-[3/4] w-full rounded-t-xl object-cover">
-                            <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Fullmetal Alchemist: Brotherhood</h3>
-                                <p class="text-xs text-gray-500">Comedia · 2021</p>
-                            </div>
+                    </div>
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                        <img src="image/fullmetal.jpg" alt="Fullmetal Alchemist: Brotherhood" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                        <div class="p-3 text-center">
+                            <h3 class="truncate text-sm font-semibold text-gray-800">Fullmetal Alchemist: Brotherhood</h3>
+                            <p class="text-xs text-gray-500">Animación / Fantasía · 2009</p>
                         </div>
-                        <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="image/avatar.jpg" alt="Serie 3" class="aspect-[3/4] w-full rounded-t-xl object-cover">
-                            <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Avatar: la leyenda de Aang</h3>
-                                <p class="text-xs text-gray-500">Animación · 2005</p>
-                            </div>
+                    </div>
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                        <img src="image/avatar.jpg" alt="Avatar: la leyenda de Aang" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                        <div class="p-3 text-center">
+                            <h3 class="truncate text-sm font-semibold text-gray-800">Avatar: la leyenda de Aang</h3>
+                            <p class="text-xs text-gray-500">Animación / Aventura · 2005</p>
                         </div>
-                        <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="image/soprano.jpg" alt="Serie 4" class="aspect-[3/4] w-full rounded-t-xl object-cover">
-                            <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Los Soprano</h3>
-                                <p class="text-xs text-gray-500">Acción · 2019</p>
-                            </div>
+                    </div>
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                        <img src="image/soprano.jpg" alt="Los Soprano" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                        <div class="p-3 text-center">
+                            <h3 class="truncate text-sm font-semibold text-gray-800">Los Soprano</h3>
+                            <p class="text-xs text-gray-500">Crimen / Drama · 1999</p>
                         </div>
-                        <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="image/ninjago.jpg" alt="Serie 5" class="aspect-[3/4] w-full rounded-t-xl object-cover">
-                            <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Lego Ninjago</h3>
-                                <p class="text-xs text-gray-500">Terror · 2023</p>
-                            </div>
+                    </div>
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                        <img src="image/ninjago.jpg" alt="Lego Ninjago" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                        <div class="p-3 text-center">
+                            <h3 class="truncate text-sm font-semibold text-gray-800">Lego Ninjago</h3>
+                            <p class="text-xs text-gray-500">Animación / Acción · 2011</p>
                         </div>
-
                     </div>
                 </div>
+            </div>
 
-                <div class="mx-auto max-w-7xl mt-10 mb-12">
-
-                    <div class="grid grid-cols-2 justify-center gap-4 sm:grid-cols-3 lg:grid-cols-5">
-                        <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="image/simpsons.jpg" alt="Serie 1" class="aspect-[3/4] w-full rounded-t-xl object-cover">
-                            <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Los Simpsons</h3>
-                                <p class="text-xs text-gray-500">Drama · 2020</p>
-                            </div>
+            <!-- Bloque 3 -->
+            <div class="mx-auto max-w-7xl mt-10 mb-8">
+                <div class="grid grid-cols-2 justify-center gap-4 sm:grid-cols-3 lg:grid-cols-5">
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                        <img src="image/simpsons.jpg" alt="Los Simpsons" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                        <div class="p-3 text-center">
+                            <h3 class="truncate text-sm font-semibold text-gray-800">Los Simpsons</h3>
+                            <p class="text-xs text-gray-500">Animación / Comedia · 1989</p>
                         </div>
-                        <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="image/clonewars.jpg" alt="Serie 2" class="aspect-[3/4] w-full rounded-t-xl object-cover">
-                            <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Star Wars Clone Wars</h3>
-                                <p class="text-xs text-gray-500">Comedia · 2021</p>
-                            </div>
+                    </div>
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                        <img src="image/clonewars.jpg" alt="Star Wars Clone Wars" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                        <div class="p-3 text-center">
+                            <h3 class="truncate text-sm font-semibold text-gray-800">Star Wars Clone Wars</h3>
+                            <p class="text-xs text-gray-500">Animación / Sci-Fi · 2008</p>
                         </div>
-                        <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="image/wire.jpg" alt="Serie 3" class="aspect-[3/4] w-full rounded-t-xl object-cover">
-                            <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">The Wire</h3>
-                                <p class="text-xs text-gray-500">Sci-Fi · 2022</p>
-                            </div>
+                    </div>
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                        <img src="image/wire.jpg" alt="The Wire" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                        <div class="p-3 text-center">
+                            <h3 class="truncate text-sm font-semibold text-gray-800">The Wire</h3>
+                            <p class="text-xs text-gray-500">Crimen / Drama · 2002</p>
                         </div>
-                        <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="image/peakyblinders.jpg" alt="Serie 4" class="aspect-[3/4] w-full rounded-t-xl object-cover">
-                            <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Peaky Blinders</h3>
-                                <p class="text-xs text-gray-500">Acción · 2019</p>
-                            </div>
+                    </div>
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                        <img src="image/peakyblinders.jpg" alt="Peaky Blinders" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                        <div class="p-3 text-center">
+                            <h3 class="truncate text-sm font-semibold text-gray-800">Peaky Blinders</h3>
+                            <p class="text-xs text-gray-500">Crimen / Drama · 2013</p>
                         </div>
-                        <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                            <img src="image/loki.jpg" alt="Serie 5" class="aspect-[3/4] w-full rounded-t-xl object-cover">
-                            <div class="p-3 text-center">
-                                <h3 class="truncate text-sm font-semibold text-gray-800">Loki</h3>
-                                <p class="text-xs text-gray-500">Terror · 2023</p>
-                            </div>
+                    </div>
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                        <img src="image/loki.jpg" alt="Loki" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                        <div class="p-3 text-center">
+                            <h3 class="truncate text-sm font-semibold text-gray-800">Loki</h3>
+                            <p class="text-xs text-gray-500">Acción / Sci-Fi · 2021</p>
                         </div>
-
                     </div>
                 </div>
+            </div>
 
-            </section>
+            <!-- PAGINACIÓN AL FINAL Y CENTRADA -->
+            <nav class="d-flex justify-content-center mt-12 mb-4" aria-label="Paginación de series">
+                <ul class="pagination pagination-md mb-0 shadow-sm">
+                    <li class="page-item disabled"><a class="page-link" href="#" aria-label="Anterior"><span aria-hidden="true">&laquo;</span></a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#" aria-label="Siguiente"><span aria-hidden="true">&raquo;</span></a></li>
+                </ul>
+            </nav>
 
-        </div>
-    </main>
+        </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+</main>
 
-    <footer class="mt-auto py-3 bg-black text-white">
-        <ul class="nav justify-content-center border-bottom border-secondary pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li>
-        </ul>
-<p class="text-center text-white mb-0">© 2025 Company, Inc</p>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<footer class="mt-auto py-3 bg-black text-white">
+    <ul class="nav justify-content-center border-bottom border-secondary pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li>
+    </ul>
+    <p class="text-center text-white mb-0">© 2025 Company, Inc</p>
 </footer>
 
 <script>
