@@ -14,17 +14,14 @@
 
 <header class="fixed top-0 w-full h-24 z-50 p-4 bg-[#7ACED4] text-white flex items-center justify-between px-8">
 
-    <!-- Logo a la izquierda -->
     <div class="w-1/4 flex items-center">
         <a href="index.html">
             <img src="image/Logo2.1.png" alt="Logo TvSeries" class="h-10 w-auto object-contain ml-4">
         </a>
     </div>
 
-    <!-- Título centrado -->
     <h1 class="text-3xl font-bold text-center flex-1">TvSeries</h1>
 
-    <!-- Dropdown a la derecha -->
     <div class="w-1/4 flex justify-end">
         <div class="dropdown dropdown-menu-end">
             <button class="btn text-black bg-white dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -41,40 +38,143 @@
 </header>
 
 <main class="flex flex-1 items-center justify-center px-3 pt-32 pb-10">
-    <div class="mx-auto max-w-4xl w-full">
-        <a href="listaSeries.html" class="btn btn-outline-light mb-4">&larr; Volver a la lista</a>
+    <div class="mx-auto max-w-6xl w-full">
+        <a href="listaSeries.html" class="btn bg-white mb-4">&larr; Volver a la lista</a>
 
-        <div class="flex flex-col items-center gap-8 rounded-2xl bg-white p-6 shadow-2xl md:flex-row md:items-start">
+        <!-- Separación uniforme entre la ficha y las cards inferiores (Bootstrap: gap-5 = 3rem) -->
+        <div class="mx-auto max-w-4xl w-full">
 
-            <img src="https://picsum.photos/seed/serie/400/600" alt="Portada de la serie" class="aspect-[3/4] w-full max-w-60 rounded-xl object-cover shadow-lg">
+            <div class="d-flex flex-column gap-5">
 
-            <div class="w-full">
-                <h2 class="text-3xl font-bold text-gray-900">Nombre de la serie</h2>
+                <div class="flex flex-col items-center gap-8 rounded-2xl bg-white p-6 shadow-2xl md:flex-row md:items-start h-auto">
 
-                <div class="mt-3 flex flex-wrap gap-2">
-                    <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">Drama</span>
-                    <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">Sci-Fi</span>
-                    <span class="rounded-full bg-gray-200 px-3 py-1 text-xs font-semibold text-gray-700">2022</span>
-                    <span class="rounded-full bg-gray-200 px-3 py-1 text-xs font-semibold text-gray-700">3 temporadas</span>
+                    <img src="image/onepiece.png" alt="Portada de One Piece" class="aspect-[3/4] w-full max-w-60 rounded-xl object-cover shadow-lg">
+
+                    <div class="w-full">
+                        <h1 class="text-3xl font-bold text-gray-900">One Piece</h1>
+
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">Animación</span>
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">Aventura</span>
+                            <span class="rounded-full bg-gray-200 px-3 py-1 text-xs font-semibold text-gray-700">1999</span>
+                            <span class="badge text-bg-success px-3 py-1 rounded-pill">En emisión</span>
+                        </div>
+
+                        <ul class="mt-4 space-y-2 text-xl text-gray-700">
+                            <li><strong>Año de estreno:</strong> 1999</li>
+                            <li><strong>Capítulos:</strong> 1.100+</li>
+                            <li><strong>Valoración:</strong> <span class="text-yellow-400">&#9733;</span> 8,7/10</li>
+                            <li><strong>Duración media por capítulo:</strong> 24 min</li>
+                            <li><strong>Productora:</strong> Toei Animation</li>
+                        </ul>
+
+                    </div>
                 </div>
+            <!-- ============ CARDS INFERIORES (más estrechas que la ficha) ============ -->
 
-                <p class="mt-4 text-sm leading-relaxed text-gray-600">
-                    Aquí irá la sinopsis de la serie seleccionada. Este contenido se rellena según la serie
-                    que el usuario elija desde la lista.
-                </p>
+                <section class="rounded-2xl bg-white p-5 shadow-xl">
+                    <h3 class="text-lg font-bold text-gray-900">De qué trata</h3>
+                    <p class="mt-2 mb-0 max-w-prose text-sm leading-relaxed text-gray-600">
+                        Hace años, el legendario pirata Gol D. Roger fue ejecutado tras ser proclamado Rey de los Piratas.
+                        Antes de morir reveló que había dejado su tesoro, el One Piece, en un lugar al final de la peligrosa Grand Line,
+                        y con esas palabras dio comienzo a la Gran Era de la Piratería. Años después, Monkey D. Luffy,
+                        un chico inspirado por el pirata Shanks, come por accidente una fruta del diablo que le convierte en un hombre de goma.
+                        Decidido a cumplir su sueño, se hace a la mar a los diecisiete años con un único objetivo: encontrar el tesoro y convertirse en el nuevo Rey de los Piratas.
+                    </p>
+                    <p class="mt-3 mb-0 max-w-prose text-sm leading-relaxed text-gray-600">
+                        Por el camino va reuniendo a la tripulación de los Sombrero de Paja, formada por personajes como Zoro, Nami, Usopp o Sanji,
+                        cada uno con su propio sueño. Juntos recorren islas muy distintas, se enfrentan a otros piratas, a la Marina
+                        y al Gobierno Mundial, y descubren que el mundo guarda secretos mucho mayores de lo que imaginaban.
+                        Entre combates, aventuras y momentos de humor, la historia habla sobre la amistad, la libertad y la fuerza de
+                        perseguir un sueño aunque todo parezca en contra.
+                    </p>
+                </section>
 
-                <ul class="mt-4 space-y-2 text-sm text-gray-700">
-                    <li><strong>Duración por episodio:</strong> 45 min</li>
-                    <li><strong>Valoración:</strong> 8.7/10</li>
-                    <li><strong>Año de emisión:</strong> 2022 - 2024</li>
-                </ul>
+                <section class="rounded-2xl bg-white p-5 shadow-xl">
+                    <h3 class="text-lg font-bold text-gray-900">Tráiler</h3>
+                    <div class="ratio ratio-16x9 mt-2 overflow-hidden rounded-xl">
+                        <iframe src="https://www.youtube.com/embed/daO54-Yeeiw"
+                                title="Tráiler de The One Piece"
+                                allow="accelerometer; encrypted-media; picture-in-picture"
+                                allowfullscreen
+                                loading="lazy"></iframe>
+                    </div>
+                </section>
 
-                <button class="btn btn-primary mt-5 px-6">Reproducir</button>
+                <section class="rounded-2xl bg-white p-5 shadow-xl">
+                    <h3 class="text-lg font-bold text-gray-900">Deja tu opinión</h3>
+
+                    <form id="formComentario" action="#" method="post" class="mt-2">
+
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label font-medium text-gray-700">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre"
+                                   placeholder="Cómo quieres aparecer" required>
+                        </div>
+
+                        <fieldset class="mb-3">
+                            <legend class="form-label mb-1 text-base font-medium text-gray-700">Tu valoración</legend>
+
+                            <div class="rating rating-md">
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" aria-label="2 star" checked="checked" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" aria-label="3 star" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" aria-label="4 star" />
+                                <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
+                            </div>
+
+                            <div class="star-rating">
+                                <input type="radio" id="estrella5" name="valoracion" value="5" required>
+                                <label for="estrella5" title="5 estrellas">&#9733;</label>
+
+                                <input type="radio" id="estrella4" name="valoracion" value="4">
+                                <label for="estrella4" title="4 estrellas">&#9733;</label>
+
+                                <input type="radio" id="estrella3" name="valoracion" value="3">
+                                <label for="estrella3" title="3 estrellas">&#9733;</label>
+
+                                <input type="radio" id="estrella2" name="valoracion" value="2">
+                                <label for="estrella2" title="2 estrellas">&#9733;</label>
+
+                                <input type="radio" id="estrella1" name="valoracion" value="1">
+                                <label for="estrella1" title="1 estrella">&#9733;</label>
+                            </div>
+                        </fieldset>
+
+                        <div class="mb-3">
+                            <label for="comentario" class="form-label font-medium text-gray-700">Comentario</label>
+                            <textarea class="form-control" id="comentario" name="comentario" rows="4"
+                                      placeholder="¿Qué te ha parecido la serie?" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary px-4">Publicar comentario</button>
+                    </form>
+
+                <!-- Comentarios publicados: se muestra al enviar el formulario -->
+                <div id="comentarios" class="d-none mt-4 border-top pt-4">
+                    <h4 class="mb-3 text-base font-bold text-gray-900">Comentarios publicados</h4>
+                    <div id="listaComentarios" class="d-flex flex-column gap-3"></div>
+                </div>
+                </section>
+
             </div>
 
         </div>
+
     </div>
+
 </main>
+
+<!-- Plantilla de cada comentario publicado -->
+<template id="plantillaComentario">
+    <article class="rounded-xl border border-gray-200 bg-gray-50 p-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+            <strong class="comentario-nombre text-gray-900"></strong>
+            <span class="comentario-estrellas text-lg text-yellow-400"></span>
+        </div>
+        <p class="comentario-texto mt-2 mb-0 whitespace-pre-line text-sm text-gray-600"></p>
+    </article>
+</template>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -88,6 +188,42 @@
     </ul>
     <p class="text-center text-white mb-0">© 2025 Company, Inc</p>
 </footer>
+
+<script>
+    // Al enviar el formulario se muestra el comentario debajo, sin recargar la página.
+    // (El HTML/CSS por sí solos no pueden leer lo que escribe el usuario, por eso hace falta este script.)
+    const formulario  = document.getElementById('formComentario');
+    const plantilla   = document.getElementById('plantillaComentario');
+    const contenedor  = document.getElementById('comentarios');
+    const lista       = document.getElementById('listaComentarios');
+
+    formulario.addEventListener('submit', function (evento) {
+        evento.preventDefault();
+
+        const datos      = new FormData(formulario);
+        const nombre     = datos.get('nombre').trim() || 'Anónimo';
+        const texto      = datos.get('comentario').trim();
+        const valoracion = Number(datos.get('valoracion'));
+
+        if (!texto) {
+            formulario.elements['comentario'].focus();
+            return;
+        }
+
+        const nodo = plantilla.content.cloneNode(true);
+        nodo.querySelector('.comentario-nombre').textContent = nombre;
+
+        const estrellas = nodo.querySelector('.comentario-estrellas');
+        estrellas.textContent = '★'.repeat(valoracion) + '☆'.repeat(5 - valoracion);
+        estrellas.setAttribute('aria-label', valoracion + ' de 5 estrellas');
+
+        nodo.querySelector('.comentario-texto').textContent = texto;
+
+        lista.prepend(nodo);              // el más reciente arriba
+        contenedor.classList.remove('d-none');
+        formulario.reset();
+    });
+</script>
 
 </body>
 </html>
