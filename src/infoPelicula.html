@@ -3,43 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TvSeries | Info serie</title>
+    <title>TvSeries | Star Wars IV: Una Nueva Esperanza</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/output.css">
+
 </head>
 
-<body class="d-flex flex-column min-vh-100 bg-gradient-to-br">
+<body class="d-flex flex-column min-vh-100 bg-gradient-to-br bg-black">
 
-<header class="fixed top-0 w-full h-24 z-50 p-4 bg-[#7ACED4] text-white flex items-center justify-between px-8">
+<header class="fixed top-0 w-full h-24 z-50 p-4 bg-[#7ACED4] text-white flex items-center justify-center px-8 shadow-md">
 
-    <div class="w-1/4 flex items-center">
+    <!-- Logo en el centro y más grande -->
+    <div class="flex items-center justify-center">
         <a href="index.html">
-            <img src="image/Logo2.1.png" alt="Logo TvSeries" class="h-10 w-auto object-contain ml-4">
+            <img src="image/logo.png" alt="Logo TvSeries" class="h-16 w-auto object-contain rounded">
         </a>
-    </div>
-
-    <h1 class="text-3xl font-bold text-center flex-1">TvSeries</h1>
-
-    <div class="w-1/4 flex justify-end">
-        <div class="dropdown dropdown-menu-end">
-            <button class="btn text-black bg-white dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                ¿Qué buscas?
-            </button>
-            <ul class="dropdown-menu bg-white text-black p-0">
-                <li><a class="dropdown-item text-black" href="listaPeliculas.html">Lista de Películas</a></li>
-                <li><a class="dropdown-item text-black" href="listaSeries.html">Lista de Series</a></li>
-                <li><a class="dropdown-item text-black" href="#">Acerca de</a></li>
-            </ul>
-        </div>
     </div>
 
 </header>
 
 <main class="flex flex-1 items-center justify-center px-3 pt-32 pb-10">
     <div class="mx-auto max-w-6xl w-full">
-        <a href="listaSeries.html" class="btn btn-outline-light mb-4">&larr; Volver a la lista</a>
+        <a href="listaPeliculas.html" class="btn bg-white mb-4">&larr; Volver a la lista</a>
 
         <!-- Separación uniforme entre la ficha y las cards inferiores (Bootstrap: gap-5 = 3rem) -->
         <div class="mx-auto max-w-4xl w-full">
@@ -48,56 +35,46 @@
 
                 <div class="flex flex-col items-center gap-8 rounded-2xl bg-white p-6 shadow-2xl md:flex-row md:items-start h-auto">
 
-                    <img src="image/onepiece.png" alt="Portada de One Piece" class="aspect-[3/4] w-full max-w-60 rounded-xl object-cover shadow-lg">
+                    <img src="image/starwars4.png" alt="Portada de Star Wars IV: Una Nueva Esperanza" class="aspect-[3/4] w-full max-w-60 rounded-xl object-cover shadow-lg">
 
                     <div class="w-full">
-                        <h1 class="text-3xl font-bold text-gray-900">One Piece</h1>
+                        <h1 class="text-3xl font-bold text-gray-900">Star Wars IV: Una Nueva Esperanza</h1>
 
                         <div class="mt-3 flex flex-wrap gap-2">
-                            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">Animación</span>
-                            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">Aventura</span>
-                            <span class="rounded-full bg-gray-200 px-3 py-1 text-xs font-semibold text-gray-700">1999</span>
-                            <span class="badge text-bg-success px-3 py-1 rounded-pill">En emisión</span>
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">Ciencia Ficción</span>
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">Acción / Aventura</span>
+                            <span class="rounded-full bg-gray-200 px-3 py-1 text-xs font-semibold text-gray-700">1977</span>
+                            <span class="badge text-bg-primary px-3 py-1 rounded-pill">Película</span>
                         </div>
 
                         <ul class="mt-4 space-y-2 text-xl text-gray-700">
-                            <li><strong>Año de estreno:</strong> 1999</li>
-                            <li><strong>Capítulos:</strong> 1.100+</li>
-                            <li><strong>Valoración:</strong> <span class="text-yellow-400">&#9733;</span> 8,7/10</li>
-                            <li><strong>Duración media por capítulo:</strong> 24 min</li>
-                            <li><strong>Productora:</strong> Toei Animation</li>
+                            <li><strong>Año de estreno:</strong> 1977</li>
+                            <li><strong>Director:</strong> George Lucas</li>
+                            <li><strong>Valoración:</strong> <span class="text-yellow-400">&#9733;</span> 8,6/10</li>
+                            <li><strong>Duración:</strong> 121 min</li>
+                            <li><strong>Productora:</strong> Lucasfilm Ltd.</li>
+                            <li><strong>Plataforma:</strong> Disney+</li>
                         </ul>
 
                     </div>
                 </div>
-            </div>
-
-            <!-- ============ CARDS INFERIORES (más estrechas que la ficha) ============ -->
-            <div class="d-flex flex-column gap-5 mx-auto w-100 max-w-4xl">
+                <!-- ============ CARDS INFERIORES ============ -->
 
                 <section class="rounded-2xl bg-white p-5 shadow-xl">
                     <h3 class="text-lg font-bold text-gray-900">De qué trata</h3>
                     <p class="mt-2 mb-0 max-w-prose text-sm leading-relaxed text-gray-600">
-                        Hace años, el legendario pirata Gol D. Roger fue ejecutado tras ser proclamado Rey de los Piratas.
-                        Antes de morir reveló que había dejado su tesoro, el One Piece, en un lugar al final de la peligrosa Grand Line,
-                        y con esas palabras dio comienzo a la Gran Era de la Piratería. Años después, Monkey D. Luffy,
-                        un chico inspirado por el pirata Shanks, come por accidente una fruta del diablo que le convierte en un hombre de goma.
-                        Decidido a cumplir su sueño, se hace a la mar a los diecisiete años con un único objetivo: encontrar el tesoro y convertirse en el nuevo Rey de los Piratas.
+                        La galaxia se encuentra sumida en una guerra civil bajo el yugo del opresivo Imperio Galáctico. La princesa Leia Organa, líder de la Alianza Rebelde, consigue interceptar los planos secretos de la mayor arma del Imperio: la Estación Espacial conocida como la Estrella de la Muerte. Tras ser capturada por el temible Darth Vader, logra confiar los datos a dos androides, R2-D2 y C-3PO, quienes acaban por accidente en el desértico planeta Tatooine.
                     </p>
                     <p class="mt-3 mb-0 max-w-prose text-sm leading-relaxed text-gray-600">
-                        Por el camino va reuniendo a la tripulación de los Sombrero de Paja, formada por personajes como Zoro, Nami, Usopp o Sanji,
-                        cada uno con su propio sueño. Juntos recorren islas muy distintas, se enfrentan a otros piratas, a la Marina
-                        y al Gobierno Mundial, y descubren que el mundo guarda secretos mucho mayores de lo que imaginaban.
-                        Entre combates, aventuras y momentos de humor, la historia habla sobre la amistad, la libertad y la fuerza de
-                        perseguir un sueño aunque todo parezca en contra.
+                        Allí son comprados por el joven granjero Luke Skywalker, quien descubre el mensaje oculto para el legendario Maestro Jedi Obi-Wan Kenobi. Acompañado por Obi-Wan, el audaz contrabandista Han Solo y su copiloto Chewbacca en la nave Halcón Milenario, Luke emprende una peligrosa misión para rescatar a la princesa y unirse a los rebeldes en una heroica batalla para destruir la Estrella de la Muerte antes de que sea demasiado tarde.
                     </p>
                 </section>
 
                 <section class="rounded-2xl bg-white p-5 shadow-xl">
                     <h3 class="text-lg font-bold text-gray-900">Tráiler</h3>
                     <div class="ratio ratio-16x9 mt-2 overflow-hidden rounded-xl">
-                        <iframe src="https://www.youtube.com/embed/daO54-Yeeiw"
-                                title="Tráiler de The One Piece"
+                        <iframe src="https://www.youtube.com/embed/beAH5vea99k?si=wFx1lZh8zb-C4Dj8"
+                                title="Tráiler de Star Wars IV: Una Nueva Esperanza"
                                 allow="accelerometer; encrypted-media; picture-in-picture"
                                 allowfullscreen
                                 loading="lazy"></iframe>
@@ -147,17 +124,17 @@
                         <div class="mb-3">
                             <label for="comentario" class="form-label font-medium text-gray-700">Comentario</label>
                             <textarea class="form-control" id="comentario" name="comentario" rows="4"
-                                      placeholder="¿Qué te ha parecido la serie?" required></textarea>
+                                      placeholder="¿Qué te ha parecido la película?" required></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary px-4">Publicar comentario</button>
                     </form>
 
-                <!-- Comentarios publicados: se muestra al enviar el formulario -->
-                <div id="comentarios" class="d-none mt-4 border-top pt-4">
-                    <h4 class="mb-3 text-base font-bold text-gray-900">Comentarios publicados</h4>
-                    <div id="listaComentarios" class="d-flex flex-column gap-3"></div>
-                </div>
+                    <!-- Comentarios publicados: se muestra al enviar el formulario -->
+                    <div id="comentarios" class="d-none mt-4 border-top pt-4">
+                        <h4 class="mb-3 text-base font-bold text-gray-900">Comentarios publicados</h4>
+                        <div id="listaComentarios" class="d-flex flex-column gap-3"></div>
+                    </div>
                 </section>
 
             </div>
@@ -183,18 +160,15 @@
 
 <footer class="mt-auto py-3 bg-black text-white">
     <ul class="nav justify-content-center border-bottom border-secondary pb-3 mb-3">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Inicio</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Peliculas</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Series</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Acerca de</a></li>
     </ul>
-    <p class="text-center text-white mb-0">© 2025 Company, Inc</p>
+    <p class="text-center text-white mb-0">© 2026 TvSeries, ES</p>
 </footer>
 
 <script>
-    // Al enviar el formulario se muestra el comentario debajo, sin recargar la página.
-    // (El HTML/CSS por sí solos no pueden leer lo que escribe el usuario, por eso hace falta este script.)
     const formulario  = document.getElementById('formComentario');
     const plantilla   = document.getElementById('plantillaComentario');
     const contenedor  = document.getElementById('comentarios');
@@ -222,7 +196,7 @@
 
         nodo.querySelector('.comentario-texto').textContent = texto;
 
-        lista.prepend(nodo);              // el más reciente arriba
+        lista.prepend(nodo);
         contenedor.classList.remove('d-none');
         formulario.reset();
     });
