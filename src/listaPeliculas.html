@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TvSeries | Lista Películas</title>
 
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="../css/output.css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
 </head>
 
 <body class="d-flex flex-column min-vh-100 bg-gradient-to-br">
@@ -193,7 +200,7 @@
 
                 <!-- Botón para Limpiar Filtros -->
                 <div class="p-2 mt-2">
-                    <button class="btn btn-sm btn-outline-secondary w-100">
+                    <button class="btn btn-sm btn-outline-secondary w-100" id="btnLimpiarFiltros">
                         <i class="bi bi-funnel"></i> Limpiar filtros
                     </button>
                 </div>
@@ -204,129 +211,142 @@
         <!-- ================= CONTENIDO / TARJETAS (DERECHA) ================= -->
         <section class="col-12 col-md-9 col-lg-10 py-4">
             <div class="mb-4">
-                <h2 class="text-center mb-2">Lista de Películas</h2>
+                <h1 class="text-center mb-2">Lista de Películas</h1>
             </div>
 
-            <!-- Bloque 1 -->
+
+            <!-- CONTENEDOR ÚNICO PARA TODOS LOS CARDS -->
             <div class="mx-auto max-w-7xl">
                 <div class="grid grid-cols-2 justify-center gap-4 sm:grid-cols-3 lg:grid-cols-5">
-                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+
+                    <!-- Tarjeta 1 -->
+                    <div id="cardStarWars" class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+                         data-genero="scifi" data-plataforma="disney">
                         <img src="image/starwars4.png" alt="Star Wars IV" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Star Wars IV: A New Hope</h3>
                             <p class="text-xs text-gray-500">Ciencia Ficción · 1977</p>
                         </div>
                     </div>
-                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+
+                    <!-- Tarjeta 2 -->
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+                         data-genero="drama" data-plataforma="hbo">
                         <img src="image/peliculas/cadenaperpetua.jpg" alt="Cadena Perpetua" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Cadena Perpetua</h3>
                             <p class="text-xs text-gray-500">Drama · 1994</p>
                         </div>
                     </div>
-                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                        <img src="image/peliculas/listaschindler.png" alt="La lista de Schindler" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+
+                    <!-- Repite el mismo formato para las demás tarjetas dentro de este mismo y único grid -->
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+                         data-genero="comedia" data-plataforma="netflix">
+                        <img src="image/peliculas/dostontos.jpg" alt="La lista de Schindler" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
-                            <h3 class="truncate text-sm font-semibold text-gray-800">La lista de Schindler</h3>
-                            <p class="text-xs text-gray-500">Drama / Bélico · 1993</p>
+                            <h3 class="truncate text-sm font-semibold text-gray-800">Dos Tontos muy Tontos</h3>
+                            <p class="text-xs text-gray-500">Comedia · 1993</p>
                         </div>
                     </div>
-                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+                         data-genero="animacion" data-plataforma="disney">
                         <img src="image/peliculas/cars.jpg" alt="Cars" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Cars</h3>
                             <p class="text-xs text-gray-500">Animación / Comedia · 2006</p>
                         </div>
                     </div>
-                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+                         data-genero="scifi" data-plataforma="amazon">
                         <img src="image/peliculas/señoranillos3.jpg" alt="El señor de los anillos" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">El señor de los anillos: El retorno del rey</h3>
                             <p class="text-xs text-gray-500">Fantasía / Aventura · 2003</p>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Bloque 2 -->
-            <div class="mx-auto max-w-7xl mt-10">
-                <div class="grid grid-cols-2 justify-center gap-4 sm:grid-cols-3 lg:grid-cols-5">
-                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+                         data-genero="animacion" data-plataforma="disney">
                         <img src="image/peliculas/planetaesoro.jpg" alt="El Planeta del Tesoro" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">El Planeta del Tesoro</h3>
                             <p class="text-xs text-gray-500">Animación / Aventura · 2002</p>
                         </div>
                     </div>
-                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+                         data-genero="drama" data-plataforma="disney">
                         <img src="image/peliculas/queen.png" alt="Bohemian Rhapsody" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Bohemian Rhapsody</h3>
                             <p class="text-xs text-gray-500">Drama / Musical · 2018</p>
                         </div>
                     </div>
-                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+                         data-genero="drama" data-plataforma="amazon">
                         <img src="image/peliculas/forrestgump.jpg" alt="Forrest Gump" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Forrest Gump</h3>
                             <p class="text-xs text-gray-500">Drama / Comedia · 1994</p>
                         </div>
                     </div>
-                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+                         data-genero="accion" data-plataforma="amazon">
                         <img src="image/peliculas/pulpfiction.jpg" alt="Pulp Fiction" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Pulp Fiction</h3>
                             <p class="text-xs text-gray-500">Crimen / Thriller · 1994</p>
                         </div>
                     </div>
-                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+                         data-genero="accion" data-plataforma="amazon">
                         <img src="image/peliculas/buenofeomalo.png" alt="El bueno, el feo y el malo" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">El bueno, el feo y el malo</h3>
                             <p class="text-xs text-gray-500">Western · 1966</p>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Bloque 3 -->
-            <div class="mx-auto max-w-7xl mt-10 mb-8">
-                <div class="grid grid-cols-2 justify-center gap-4 sm:grid-cols-3 lg:grid-cols-5">
-                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+                         data-genero="scifi" data-plataforma="netflix">
                         <img src="image/peliculas/spiderman2.jpg" alt="The Amazing Spider-Man 2" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">The Amazing Spider-Man 2</h3>
                             <p class="text-xs text-gray-500">Acción / Aventura · 2014</p>
                         </div>
                     </div>
-                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+                         data-genero="scifi" data-plataforma="hbo">
                         <img src="image/peliculas/batman.jpg" alt="Batman: El Caballero Oscuro" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Batman: El Caballero Oscuro</h3>
-                            <p class="text-xs text-gray-500">Acción / Crimen · 2008</p>
+                            <p class="text-xs text-gray-500">Ciencia Ficción · 2008</p>
                         </div>
                     </div>
-                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+                         data-genero="scifi" data-plataforma="disney">
                         <img src="image/peliculas/capamerica.jpg" alt="Capitán América" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Capitán América: El Soldado de Invierno</h3>
                             <p class="text-xs text-gray-500">Acción / Sci-Fi · 2014</p>
                         </div>
                     </div>
-                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+                         data-genero="animacion" data-plataforma="disney">
                         <img src="image/peliculas/toystory3.jpg" alt="Toy Story 3" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Toy Story 3</h3>
                             <p class="text-xs text-gray-500">Animación / Aventura · 2010</p>
                         </div>
                     </div>
-                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl">
-                        <img src="image/peliculas/topgun.jpg" alt="Top Gun" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                    <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
+                         data-genero="terror" data-plataforma="netflix">
+                        <img src="image/peliculas/tiburon.jpg" alt="Tiburón" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
-                            <h3 class="truncate text-sm font-semibold text-gray-800">Top Gun</h3>
-                            <p class="text-xs text-gray-500">Acción / Drama · 1986</p>
+                            <h3 class="truncate text-sm font-semibold text-gray-800">Tiburón</h3>
+                            <p class="text-xs text-gray-500">Terror / Suspense · 1975</p>
                         </div>
                     </div>
+
                 </div>
             </div>
 
@@ -349,20 +369,80 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<footer class="mt-auto py-3 bg-black text-white">
-    <ul class="nav justify-content-center border-bottom border-secondary pb-3 mb-3">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Inicio</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Peliculas</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Series</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Acerca de</a></li>
+<footer class="mt-auto py-6 bg-slate-900 text-white">
+    <ul class="nav justify-content-center border-b border-slate-800 pb-4 mb-4">
+        <li class="nav-item"><a href="#" class="nav-link px-3 text-slate-300 hover:text-cyan-400 transition-colors">Inicio</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-3 text-slate-300 hover:text-cyan-400 transition-colors">Películas</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-3 text-slate-300 hover:text-cyan-400 transition-colors">Series</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-3 text-slate-300 hover:text-cyan-400 transition-colors">Acerca de</a></li>
     </ul>
-    <p class="text-center text-white mb-0">© 2026 TvSeries, ES</p>
+    <p class="text-center text-slate-400 text-sm mb-0">© 2026 TvSeries, ES</p>
 </footer>
 
 <script>
-    document.querySelectorAll('.card-lista').forEach(function (card) {
-        card.addEventListener('click', function () {
+
+    const cardStarWars = document.getElementById('cardStarWars');
+
+    if (cardStarWars) {
+        cardStarWars.addEventListener('click', function () {
             window.location.href = 'infoPelicula.html';
+        });
+    }
+
+    $(document).ready(function () {
+        function filtrarPeliculas() {
+            // Obtener los géneros seleccionados
+            let generosSeleccionados = [];
+            $('#collapseGenero input[type="checkbox"]:checked').each(function () {
+                // Suponiendo que asocias un ID o clase, o puedes usar un atributo data-filter en el checkbox
+                let id = $(this).attr('id');
+                // Mapeo simple según el ID del checkbox
+                if (id === 'catAccion') generosSeleccionados.push('accion');
+                if (id === 'catSciFi') generosSeleccionados.push('scifi');
+                if (id === 'catDrama') generosSeleccionados.push('drama');
+                if (id === 'catComedia') generosSeleccionados.push('comedia');
+                if (id === 'catTerror') generosSeleccionados.push('terror');
+                if (id === 'catAnimacion') generosSeleccionados.push('animacion');
+            });
+
+            // Obtener las plataformas seleccionadas
+            let plataformasSeleccionadas = [];
+            $('#collapsePlataforma input[type="checkbox"]:checked').each(function () {
+                let id = $(this).attr('id');
+                if (id === 'platNetflix') plataformasSeleccionadas.push('netflix');
+                if (id === 'platHBO') plataformasSeleccionadas.push('hbo');
+                if (id === 'platDisney') plataformasSeleccionadas.push('disney');
+                if (id === 'platAmazon') plataformasSeleccionadas.push('amazon');
+                if (id === 'platApple') plataformasSeleccionadas.push('apple');
+            });
+
+            // Iterar sobre cada tarjeta de película
+            $('.card-lista').each(function () {
+                let $card = $(this);
+                let generoCard = $card.data('genero') || '';
+                let plataformaCard = $card.data('plataforma') || '';
+
+                let cumpleGenero = (generosSeleccionados.length === 0) || generosSeleccionados.includes(generoCard);
+                let cumplePlataforma = (plataformasSeleccionadas.length === 0) || plataformasSeleccionadas.includes(plataformaCard);
+
+                // Mostrar u ocultar la tarjeta según los criterios
+                if (cumpleGenero && cumplePlataforma) {
+                    $card.show();
+                } else {
+                    $card.hide();
+                }
+            });
+        }
+
+        // Ejecutar el filtrado cada vez que cambie un checkbox en los filtros de género o plataforma
+        $('#collapseGenero input[type="checkbox"], #collapsePlataforma input[type="checkbox"]').on('change', function () {
+            filtrarPeliculas();
+        });
+
+        // Botón opcional de limpiar filtros
+        $('.btn-outline-secondary').on('click', function () {
+            $('#accordionFiltros input[type="checkbox"]').prop('checked', false);
+            $('.card-lista').show();
         });
     });
 </script>
