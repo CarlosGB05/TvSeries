@@ -31,8 +31,6 @@
 
 </header>
 
-
-
 <main class="container-fluid px-4 pt-5 pb-12 flex-grow-1" style="padding-top: 7rem !important;">
     <div class="row">
 
@@ -133,11 +131,11 @@
                     <div id="collapseAño" class="accordion-collapse collapse">
                         <div class="accordion-body p-2">
                             <div class="d-flex align-items-center gap-2 mb-2">
-                                <input type="number" class="form-control form-control-sm" placeholder="Mín (e.g. 1990)">
+                                <input type="number" id="anioMin" class="form-control form-control-sm" placeholder="Mín (e.g. 1990)">
                                 <span>-</span>
-                                <input type="number" class="form-control form-control-sm" placeholder="Máx (e.g. 2024)">
+                                <input type="number" id="anioMax" class="form-control form-control-sm" placeholder="Máx (e.g. 2024)">
                             </div>
-                            <button class="btn btn-sm btn-outline-dark w-100">Aplicar</button>
+                            <button id="btnAplicarAnio" class="btn btn-sm btn-outline-dark w-100">Aplicar</button>
                         </div>
                     </div>
                 </div>
@@ -152,19 +150,19 @@
                     <div id="collapseRating" class="accordion-collapse collapse">
                         <div class="accordion-body p-2">
                             <div class="form-check mb-2">
-                                <input class="form-check-input" type="radio" name="ratingRadio" id="rate9">
+                                <input class="form-check-input" type="radio" name="ratingRadio" id="rate9" value="9.0">
                                 <label class="form-check-label text-warning" for="rate9">
                                     ★★★★★ <span class="text-dark">(9.0 o más)</span>
                                 </label>
                             </div>
                             <div class="form-check mb-2">
-                                <input class="form-check-input" type="radio" name="ratingRadio" id="rate8">
+                                <input class="form-check-input" type="radio" name="ratingRadio" id="rate8" value="8.0">
                                 <label class="form-check-label text-warning" for="rate8">
                                     ★★★★☆ <span class="text-dark">(8.0 o más)</span>
                                 </label>
                             </div>
                             <div class="form-check mb-2">
-                                <input class="form-check-input" type="radio" name="ratingRadio" id="rate7">
+                                <input class="form-check-input" type="radio" name="ratingRadio" id="rate7" value="7.0">
                                 <label class="form-check-label text-warning" for="rate7">
                                     ★★★☆☆ <span class="text-dark">(7.0 o más)</span>
                                 </label>
@@ -214,13 +212,12 @@
                 <h2 class="text-center mb-2"></h2>
             </div>
 
-
             <!-- CONTENEDOR ÚNICO PARA TODOS LOS CARDS -->
             <div class="mx-auto max-w-7xl">
                 <div class="grid grid-cols-2 justify-center gap-4 sm:grid-cols-3 lg:grid-cols-5">
 
                     <div id="cardOnePiece" class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
-                         data-genero="anime" data-plataforma="netflix">
+                         data-genero="anime" data-plataforma="netflix" data-anio="1999" data-rating="8.9" data-estado="emision">
                         <img src="image/series/onepiece.png" alt="One Piece" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">One Piece</h3>
@@ -228,7 +225,7 @@
                         </div>
                     </div>
                     <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
-                         data-genero="crime" data-plataforma="netflix">
+                         data-genero="crime" data-plataforma="netflix" data-anio="2008" data-rating="9.5" data-estado="finalizada">
                         <img src="image/series/breakingbad.png" alt="Breaking Bad" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Breaking Bad</h3>
@@ -236,15 +233,15 @@
                         </div>
                     </div>
                     <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
-                         data-genero="scifi" data-plataforma="disney">
-                        <img src="image/series/mandalorian.jpg" alt="Band of Brothers" class="aspect-[3/4] w-full rounded-t-xl object-cover">
+                         data-genero="scifi" data-plataforma="disney" data-anio="2019" data-rating="8.6" data-estado="emision">
+                        <img src="image/series/mandalorian.jpg" alt="The Mandalorian" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">The Mandalorian</h3>
                             <p class="text-xs text-gray-500">Acción / Sci-Fi · 2019</p>
                         </div>
                     </div>
                     <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
-                         data-genero="crime" data-plataforma="hbo">
+                         data-genero="crime" data-plataforma="hbo" data-anio="2019" data-rating="9.3" data-estado="miniserie">
                         <img src="image/series/Chernobyl.jfif" alt="Chernobyl" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Chernobyl</h3>
@@ -252,7 +249,7 @@
                         </div>
                     </div>
                     <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
-                         data-genero="scifi" data-plataforma="hbo">
+                         data-genero="scifi" data-plataforma="hbo" data-anio="2011" data-rating="9.2" data-estado="finalizada">
                         <img src="image/series/gamethrones.jfif" alt="Game of Thrones" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Game of Thrones</h3>
@@ -261,7 +258,7 @@
                     </div>
 
                     <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
-                         data-genero="accion" data-plataforma="disney">
+                         data-genero="accion" data-plataforma="disney" data-anio="2015" data-rating="8.6" data-estado="finalizada">
                         <img src="image/series/daredevil.jpg" alt="Daredevil" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Daredevil</h3>
@@ -269,7 +266,7 @@
                         </div>
                     </div>
                     <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
-                         data-genero="anime" data-plataforma="netflix">
+                         data-genero="anime" data-plataforma="netflix" data-anio="2009" data-rating="9.1" data-estado="finalizada">
                         <img src="image/series/fullmetal.jpg" alt="Fullmetal Alchemist: Brotherhood" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Fullmetal Alchemist: Brotherhood</h3>
@@ -277,7 +274,7 @@
                         </div>
                     </div>
                     <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
-                         data-genero="anime" data-plataforma="netflix">
+                         data-genero="anime" data-plataforma="netflix" data-anio="2005" data-rating="9.3" data-estado="finalizada">
                         <img src="image/series/avatar.jpg" alt="Avatar: la leyenda de Aang" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Avatar: la leyenda de Aang</h3>
@@ -285,7 +282,7 @@
                         </div>
                     </div>
                     <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
-                         data-genero="crime" data-plataforma="hbo">
+                         data-genero="crime" data-plataforma="hbo" data-anio="1999" data-rating="9.2" data-estado="finalizada">
                         <img src="image/series/soprano.jpg" alt="Los Soprano" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Los Soprano</h3>
@@ -293,7 +290,7 @@
                         </div>
                     </div>
                     <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
-                         data-genero="animacion" data-plataforma="netflix">
+                         data-genero="animacion" data-plataforma="netflix" data-anio="2011" data-rating="7.5" data-estado="emision">
                         <img src="image/series/ninjago.jpg" alt="Lego Ninjago" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Lego Ninjago</h3>
@@ -302,7 +299,7 @@
                     </div>
 
                     <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
-                         data-genero="comedia" data-plataforma="hbo">
+                         data-genero="comedia" data-plataforma="hbo" data-anio="1989" data-rating="8.7" data-estado="emision">
                         <img src="image/series/simpsons.jpg" alt="Los Simpsons" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Los Simpsons</h3>
@@ -310,7 +307,7 @@
                         </div>
                     </div>
                     <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
-                         data-genero="animacion" data-plataforma="disney">
+                         data-genero="animacion" data-plataforma="disney" data-anio="2008" data-rating="8.8" data-estado="finalizada">
                         <img src="image/series/clonewars.jpg" alt="Star Wars Clone Wars" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Star Wars Clone Wars</h3>
@@ -318,7 +315,7 @@
                         </div>
                     </div>
                     <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
-                         data-genero="crime" data-plataforma="hbo">
+                         data-genero="crime" data-plataforma="hbo" data-anio="2002" data-rating="9.3" data-estado="finalizada">
                         <img src="image/series/wire.jpg" alt="The Wire" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">The Wire</h3>
@@ -326,7 +323,7 @@
                         </div>
                     </div>
                     <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
-                         data-genero="crime" data-plataforma="netflix">
+                         data-genero="crime" data-plataforma="netflix" data-anio="2013" data-rating="8.8" data-estado="finalizada">
                         <img src="image/series/peakyblinders.jpg" alt="Peaky Blinders" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Peaky Blinders</h3>
@@ -334,7 +331,7 @@
                         </div>
                     </div>
                     <div class="card-lista cursor-pointer w-full rounded-xl bg-white shadow-lg transition hover:scale-105 hover:shadow-xl"
-                         data-genero="scifi" data-plataforma="disney">
+                         data-genero="scifi" data-plataforma="disney" data-anio="2021" data-rating="8.2" data-estado="emision">
                         <img src="image/series/loki.jpg" alt="Loki" class="aspect-[3/4] w-full rounded-t-xl object-cover">
                         <div class="p-3 text-center">
                             <h3 class="truncate text-sm font-semibold text-gray-800">Loki</h3>
@@ -364,15 +361,34 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<footer class="mt-auto py-6 bg-slate-900 text-white">
-    <ul class="nav justify-content-center border-b border-slate-800 pb-4 mb-4">
-        <li class="nav-item"><a href="#" class="nav-link px-3 text-slate-300 hover:text-cyan-400 transition-colors">Inicio</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-3 text-slate-300 hover:text-cyan-400 transition-colors">Películas</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-3 text-slate-300 hover:text-cyan-400 transition-colors">Series</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-3 text-slate-300 hover:text-cyan-400 transition-colors">Acerca de</a></li>
-    </ul>
-    <p class="text-center text-slate-400 text-sm mb-0">© 2026 TvSeries, ES</p>
+<!-- FOOTER -->
+<footer class="footer sm:footer-horizontal bg-slate-900 text-white p-10">
+    <aside>
+        <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="fill-current">
+            <image href="image/iconFooter.png" x="4" y="4" width="20" height="20"/>
+        </svg>
+        <p>
+            © 2026 TvSeries, ES.
+            <br />
+            Producto realizado en España, 2026.
+        </p>
+    </aside>
+    <nav></nav>
+    <nav></nav>
+    <nav>
+        <h6 class="footer-title">TvSeries</h6>
+        <a class="link link-hover">Acerca de</a>
+        <a class="link link-hover">Contacto</a>
+        <a class="link link-hover">Trabajos</a>
+    </nav>
+    <nav>
+        <h6 class="footer-title">Legal</h6>
+        <a class="link link-hover">Términos de uso</a>
+        <a class="link link-hover">Política de privacidad</a>
+        <a class="link link-hover">Política de cookies</a>
+    </nav>
 </footer>
+
 <script>
     const cardOnePiece = document.getElementById('cardOnePiece');
 
@@ -384,7 +400,7 @@
 
     $(document).ready(function () {
         function filtrarSeries() {
-            // Obtener los géneros seleccionados según los IDs de las series
+            // 1. Géneros seleccionados
             let generosSeleccionados = [];
             $('#collapseGenero input[type="checkbox"]:checked').each(function () {
                 let id = $(this).attr('id');
@@ -396,7 +412,7 @@
                 if (id === 'catSciFi') generosSeleccionados.push('scifi');
             });
 
-            // Obtener las plataformas seleccionadas
+            // 2. Plataformas seleccionadas
             let plataformasSeleccionadas = [];
             $('#collapsePlataforma input[type="checkbox"]:checked').each(function () {
                 let id = $(this).attr('id');
@@ -407,17 +423,40 @@
                 if (id === 'platApple') plataformasSeleccionadas.push('apple');
             });
 
-            // Iterar sobre cada tarjeta de la lista de series
+            // 3. Rango de Años
+            let anioMin = parseInt($('#anioMin').val(), 10);
+            let anioMax = parseInt($('#anioMax').val(), 10);
+
+            // 4. Valoración
+            let ratingMin = parseFloat($('input[name="ratingRadio"]:checked').val());
+
+            // 5. Estados seleccionados
+            let estadosSeleccionados = [];
+            $('#collapseEstado input[type="checkbox"]:checked').each(function () {
+                let id = $(this).attr('id');
+                if (id === 'estEmision') estadosSeleccionados.push('emision');
+                if (id === 'estFinalizada') estadosSeleccionados.push('finalizada');
+                if (id === 'estMiniserie') estadosSeleccionados.push('miniserie');
+            });
+
+            // Filtrado único combinando todos los criterios
             $('.card-lista').each(function () {
                 let $card = $(this);
                 let generoCard = $card.data('genero') || '';
                 let plataformaCard = $card.data('plataforma') || '';
+                let anioCard = parseInt($card.data('anio'), 10) || 0;
+                let ratingCard = parseFloat($card.data('rating')) || 0;
+                let estadoCard = $card.data('estado') || '';
 
                 let cumpleGenero = (generosSeleccionados.length === 0) || generosSeleccionados.includes(generoCard);
                 let cumplePlataforma = (plataformasSeleccionadas.length === 0) || plataformasSeleccionadas.includes(plataformaCard);
+                let cumpleAnioMin = isNaN(anioMin) || (anioCard >= anioMin);
+                let cumpleAnioMax = isNaN(anioMax) || (anioCard <= anioMax);
+                let cumpleRating = isNaN(ratingMin) || (ratingCard >= ratingMin);
+                let cumpleEstado = (estadosSeleccionados.length === 0) || estadosSeleccionados.includes(estadoCard);
 
-                // Mostrar u ocultar la tarjeta según los criterios
-                if (cumpleGenero && cumplePlataforma) {
+                // Si cumple todos los criterios se muestra, sino se oculta
+                if (cumpleGenero && cumplePlataforma && cumpleAnioMin && cumpleAnioMax && cumpleRating && cumpleEstado) {
                     $card.show();
                 } else {
                     $card.hide();
@@ -425,14 +464,21 @@
             });
         }
 
-        // Eventos de cambio en los checkboxes de los filtros
-        $('#collapseGenero input[type="checkbox"], #collapsePlataforma input[type="checkbox"]').on('change', function () {
+        // Eventos para desencadenar el filtrado
+        $('#collapseGenero input[type="checkbox"], #collapsePlataforma input[type="checkbox"], #collapseEstado input[type="checkbox"], input[name="ratingRadio"]').on('change', function () {
             filtrarSeries();
         });
 
-        // Botón para limpiar filtros
+        // Evento específico para aplicar el rango de años
+        $('#btnAplicarAnio').on('click', function () {
+            filtrarSeries();
+        });
+
+        // Botón para limpiar todos los filtros
         $('#btnLimpiarFiltros').on('click', function () {
             $('#accordionFiltros input[type="checkbox"]').prop('checked', false);
+            $('#accordionFiltros input[type="radio"]').prop('checked', false);
+            $('#anioMin, #anioMax').val('');
             $('.card-lista').show();
         });
     });
